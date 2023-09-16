@@ -123,7 +123,7 @@ class LoginScreen extends GetView<LoginScreenController> {
                      padding: const EdgeInsets.symmetric(vertical: 48.0),
                      child: CustomPrimaryButton(
                          buttonName: 'Log in',
-                         onTap: (){},
+                         onTap: ()=> Get.toNamed(kProfileScreen),
                          gradientColor: CustomAppColor.buttonGradient2,
                          borderRadius: 10.0,
                          buttonWidth: Get.width * 0.4

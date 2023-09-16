@@ -13,6 +13,8 @@ class CustomAppColor {
   static const Color kButtonGradientColor = Color(0xFF7260CC);
   static const Color kButtonGradientBottomColor = Color(0xFF312B50);
   static const Color kGoogleButtonColor = Color(0xFF7D6AE2);
+  static const Color kButtonGradientBottom = Color(0xFF363E40);
+  static const Color kBottomNavBarColor = Color(0xFF767194);
   static const Color kTransparentColor = Colors.transparent;
 
 
@@ -28,8 +30,8 @@ class CustomAppColor {
 
   static const Gradient buttonGradient = LinearGradient(
     colors: [
+      CustomAppColor.kButtonGradientBottom,
       CustomAppColor.kDarkBlueColor,
-      CustomAppColor.kBottomColor,
     ],
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
