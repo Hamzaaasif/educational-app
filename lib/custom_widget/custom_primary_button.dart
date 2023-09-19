@@ -64,7 +64,7 @@ class CustomPrimaryButton extends StatelessWidget {
               ),
               Text( buttonName,
                 style: TextStyle(
-                  color: CustomAppColor.kWhiteColor,
+                  color: textColor ?? CustomAppColor.kWhiteColor,
                   fontFamily: CustomTextSizing.kPoppinsFontFamily,
                   fontSize: buttonFontSize,
                   fontWeight: FontWeight.w600,

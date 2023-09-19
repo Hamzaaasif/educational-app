@@ -1,3 +1,5 @@
+import 'package:educational_app/controller/chat_gpt_screen_controller.dart';
+import 'package:educational_app/controller/dashboard_screen_controller.dart';
 import 'package:educational_app/controller/home_screen_controller.dart';
 import 'package:educational_app/controller/login_screen_controller.dart';
 import 'package:educational_app/controller/onboarding_screen_controller.dart';
@@ -8,6 +10,9 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/src/bindings_interface.dart';
 
+import '../controller/lessons_screen_controller.dart';
+import '../controller/notification_screen_controller.dart';
+import '../controller/quizes_screen_controller.dart';
 import '../controller/splash_screen_controller.dart';
 
 class ScreenBindings extends Bindings{
@@ -20,5 +25,10 @@ class ScreenBindings extends Bindings{
     Get.lazyPut(() => LoginScreenController());
     Get.lazyPut(() => HomeScreenController());
     Get.lazyPut(() => ProfileScreenController());
+    Get.lazyPut(() => NotificationScreenController());
+    Get.lazyPut(() => LessonScreenController());
+    Get.lazyPut(() => QuizScreenController());
+    Get.lazyPut(() => ChatGptScreenController());
+    Get.lazyPut(() => DashboardScreenController());
   }
 }

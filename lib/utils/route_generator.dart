@@ -1,12 +1,17 @@
 import 'package:educational_app/utils/screen_binding.dart';
+import 'package:educational_app/views/chat_gpt_screen.dart';
+import 'package:educational_app/views/dashboard_screen.dart';
 import 'package:educational_app/views/home_screen.dart';
 import 'package:educational_app/views/login_screen.dart';
+import 'package:educational_app/views/notification_screen.dart';
 import 'package:educational_app/views/onboarding_screen.dart';
 import 'package:educational_app/views/profile_screen.dart';
+import 'package:educational_app/views/quizes_screen.dart';
 import 'package:educational_app/views/registration_screen.dart';
 import 'package:educational_app/views/setting_screen.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
+import '../views/lessons_screen.dart';
 import '../views/splash_screen.dart';
 import 'app_constant.dart';
 
@@ -46,6 +51,31 @@ class RouteGenerator {
       GetPage(
         name: kProfileScreen,
         page: () => const ProfileScreen(),
+        binding: ScreenBindings(),
+      ),
+      GetPage(
+        name: kNotificationScreen,
+        page: () => const NotificationScreen(),
+        binding: ScreenBindings(),
+      ),
+      GetPage(
+        name: kLessonScreen,
+        page: () => const LessonScreen(),
+        binding: ScreenBindings(),
+      ),
+      GetPage(
+        name: kQuizScreen,
+        page: () => const QuizScreen(),
+        binding: ScreenBindings(),
+      ),
+      GetPage(
+        name: kChatGptScreen,
+        page: () => const ChatGptScreen(),
+        binding: ScreenBindings(),
+      ),
+      GetPage(
+        name: kDashboardScreen,
+        page: () => const DashboardScreen(),
         binding: ScreenBindings(),
       ),
 

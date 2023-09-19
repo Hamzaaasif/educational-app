@@ -16,6 +16,7 @@ class RegistrationScreen extends GetView<RegistrationScreenController>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         width: Get.width,
         decoration: const BoxDecoration(
@@ -153,7 +154,7 @@ class RegistrationScreen extends GetView<RegistrationScreenController>{
                       gradientColor: CustomAppColor.buttonGradient2,
                       borderRadius: 8.0,
                       buttonWidth: Get.width * 0.4,
-                      buttonFontSize: 50,
+                      buttonFontSize: 90,
                   ),
                 ),
               ),

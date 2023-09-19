@@ -29,12 +29,12 @@ class BottomCustomNavBar extends StatelessWidget {
             icon: Image.asset("assets/icons/home.png", width: 25.0, height: 25.0,),
           ),
           BottomNavigationBarItem(
-            label: 'Health',
+            label: 'Lesson',
             icon: Image.asset("assets/icons/notes.png", width: 25.0, height: 25.0,),
 
           ),
           BottomNavigationBarItem(
-            label: 'Health',
+            label: 'Profile',
             icon: Image.asset("assets/icons/Vector.png", width: 25.0, height: 25.0,),
 
           ),

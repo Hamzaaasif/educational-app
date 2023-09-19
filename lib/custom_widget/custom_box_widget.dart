@@ -40,20 +40,18 @@ class CustomBoxtWidget extends StatelessWidget {
           ),
         ],
       ),
-      alignment: Alignment.center,
-      padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 30.0,),
-      child: Row(
-        children: [
-          Text(
-            boxName,
-            style: TextStyle(
-              color: CustomAppColor.kWhiteColor,
-              fontFamily: CustomTextSizing.kPoppinsFontFamily,
-              fontSize: textFontSize,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-        ],
+      alignment: Alignment.centerLeft,
+      padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 10.0,),
+      child: Text(
+        boxName,
+        style: TextStyle(
+          color: CustomAppColor.kWhiteColor,
+          fontFamily: CustomTextSizing.kPoppinsFontFamily,
+          fontSize: textFontSize,
+          fontWeight: FontWeight.w600,
+          overflow: TextOverflow.ellipsis,
+        ),
+        maxLines: 2,
       ),
     );
   }

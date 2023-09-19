@@ -106,15 +106,18 @@ class LoginScreen extends GetView<LoginScreenController> {
                            ),),
                          ),
                        ),
-                       const Expanded(
+                        Expanded(
                          child:  Padding(
                            padding: EdgeInsets.only(left: 25.0),
-                           child: Text("Forgot password", style : TextStyle(
-                             color: CustomAppColor.kGreyColor,
-                             fontFamily: CustomTextSizing.kPoppinsFontFamily,
-                             fontSize: 13.0,
-                             fontWeight: FontWeight.w500,
-                           ),),
+                           child: GestureDetector(
+                             onTap: (){},
+                             child: const Text("Forgot password", style : TextStyle(
+                               color: CustomAppColor.kGreyColor,
+                               fontFamily: CustomTextSizing.kPoppinsFontFamily,
+                               fontSize: 13.0,
+                               fontWeight: FontWeight.w500,
+                             ),),
+                           ),
                          ),
                        ),
                      ],
@@ -123,7 +126,7 @@ class LoginScreen extends GetView<LoginScreenController> {
                      padding: const EdgeInsets.symmetric(vertical: 48.0),
                      child: CustomPrimaryButton(
                          buttonName: 'Log in',
-                         onTap: ()=> Get.toNamed(kProfileScreen),
+                         onTap: ()=> Get.toNamed(kDashboardScreen),
                          gradientColor: CustomAppColor.buttonGradient2,
                          borderRadius: 10.0,
                          buttonWidth: Get.width * 0.4
