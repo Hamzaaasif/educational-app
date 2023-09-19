@@ -150,7 +150,7 @@ class RegistrationScreen extends GetView<RegistrationScreenController>{
                   alignment: Alignment.center,
                   child: CustomPrimaryButton(
                       buttonName: 'Create Account',
-                      onTap: (){},
+                      onTap: ()=> Get.toNamed(kLoginScreen),
                       gradientColor: CustomAppColor.buttonGradient2,
                       borderRadius: 8.0,
                       buttonWidth: Get.width * 0.4,

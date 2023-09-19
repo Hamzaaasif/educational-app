@@ -33,7 +33,7 @@ class CustomImageBoxes extends StatelessWidget {
     return GestureDetector(
       onTap: onBoxTap,
       child: Container(
-        height: boxHeight,
+
         width: boxWidth,
         decoration: BoxDecoration(
           gradient: gradientColor,
@@ -46,12 +46,11 @@ class CustomImageBoxes extends StatelessWidget {
             ),
           ],
         ),
-        // alignment: Alignment.center,
-        padding: const EdgeInsets.symmetric(vertical: 2.0,horizontal: 10.0,),
+        padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 10.0,),
         child: Column(
           children: [
             Text(
-              boxName,
+              boxName,maxLines: 1,
               style: TextStyle(
                 color: CustomAppColor.kGreyColor,
                 fontFamily: CustomTextSizing.kPoppinsFontFamily,
