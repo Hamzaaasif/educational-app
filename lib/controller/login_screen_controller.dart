@@ -1,6 +1,9 @@
+import 'package:educational_app/utils/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
+import '../utils/app_constant.dart';
 import '../utils/utils_methods.dart';
 
 class LoginScreenController extends GetxController{
@@ -11,6 +14,17 @@ class LoginScreenController extends GetxController{
   RxString emailErrorMsg=''.obs;
   RxBool switchValue = false.obs;
   late FocusNode emailFocusNode;
+
+  Future<void> onGoogleSignIn() async{
+    GoogleSignIn googleSignIn = GoogleSignIn();
+    try {
+      await googleSignIn.signIn();
+      if(googleSignIn.currentUser!.id!='') {
+        Get.toNamed(kDashboardScreen);
+      }
+    } catch (error) {
+    }
+  }
 
 
 

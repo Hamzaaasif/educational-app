@@ -61,7 +61,7 @@ class OnBoardingScreen extends GetView<OnBoardingScreenController> {
                   ),
                 ],
               ),
-               Spacer(),
+               const Spacer(),
                Row(
                 children: [
                   CustomPrimaryButton(buttonName: "Next", onTap: ()=> {

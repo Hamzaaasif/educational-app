@@ -30,43 +30,48 @@ class CustomLessonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
         children: [
-          Container(
-            height: boxHeight,
-            width: boxWidth,
-            decoration: BoxDecoration(
-              gradient: gradientColor,
-              borderRadius: BorderRadius.circular(borderRadius),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.2),
-                  offset: const Offset(0, 4),
-                  blurRadius: 4,
-                ),
-              ],
-            ),
-            alignment: Alignment.center,
-            padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 30.0,),
-            child: Column(
-              children: [
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 8.0),
-                    child: Text(
-                      titleMsg,
-                      style: const TextStyle(
-                        color: CustomAppColor.kBlueTextColor,
-                        fontFamily: CustomTextSizing.kPoppinsFontFamily,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
+          GestureDetector(
+            onTap: (){
+              onTap();
+            },
+            child: Container(
+              height: boxHeight,
+              width: boxWidth,
+              decoration: BoxDecoration(
+                gradient: gradientColor,
+                borderRadius: BorderRadius.circular(borderRadius),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    offset: const Offset(0, 4),
+                    blurRadius: 4,
+                  ),
+                ],
+              ),
+              alignment: Alignment.center,
+              padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 30.0,),
+              child: Column(
+                children: [
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 8.0),
+                      child: Text(
+                        titleMsg,
+                        style: const TextStyle(
+                          color: CustomAppColor.kBlueTextColor,
+                          fontFamily: CustomTextSizing.kPoppinsFontFamily,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Align(
-                  alignment: Alignment.bottomRight,
-                    child: Image.asset("$imagePath", height: 70, width: 70,)),
-              ],
+                  Align(
+                    alignment: Alignment.bottomRight,
+                      child: Image.asset("$imagePath", height: 70, width: 70,)),
+                ],
+              ),
             ),
           ),
         ]

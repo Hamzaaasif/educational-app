@@ -55,14 +55,19 @@ class LessonScreen extends GetView<LessonScreenController> {
                     CustomLessonWidget(
                       titleMsg: 'A recursive method in java',
                       imagePath: controller.lessonJavaImage,
-                      onTap: () {},
+                      onTap: () {
+                        // controller.javaLaunchURL();
+                      },
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 20.0),
                       child: CustomLessonWidget(
                         titleMsg: 'Java Collection',
                         imagePath: controller.javaCollectionImage,
-                        onTap: () {},
+                        onTap: () {
+                          // controller.javaLaunchURL2();
+
+                        },
                       ),
                     ),
                     Padding(
@@ -70,7 +75,10 @@ class LessonScreen extends GetView<LessonScreenController> {
                       child: CustomLessonWidget(
                         titleMsg: 'How To Initialize an Array list in Java?',
                         imagePath: controller.javaListImage,
-                        onTap: () {},
+                        onTap: () {
+                          // controller.javaLaunchURL3();
+
+                        },
                       ),
                     ),
                     Padding(
@@ -78,7 +86,9 @@ class LessonScreen extends GetView<LessonScreenController> {
                       child: CustomLessonWidget(
                         titleMsg: 'Recursion & Loops',
                         imagePath: controller.javaLoopImage,
-                        onTap: () {},
+                        onTap: () {
+                          // controller.javaLaunchURL4();
+                        },
                       ),
                     ),
                   ],

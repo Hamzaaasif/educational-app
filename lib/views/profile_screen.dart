@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import '../custom_widget/custom_box_widget.dart';
 import '../utils/app_colors.dart';
+import '../utils/app_constant.dart';
 import '../utils/custom_text.dart';
 
 class ProfileScreen extends GetView<ProfileScreenController> {
@@ -57,7 +58,7 @@ class ProfileScreen extends GetView<ProfileScreenController> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(bottom: 15.0),
-                    child: CustomBoxtWidget(
+                    child: CustomBoxWidget(
                       boxHeight: Get.height * 0.08,
                       boxName: 'Username',
                       onTap: () {},
@@ -67,7 +68,7 @@ class ProfileScreen extends GetView<ProfileScreenController> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 15.0),
-                    child: CustomBoxtWidget(
+                    child: CustomBoxWidget(
                       boxHeight: Get.height * 0.08,
                       boxName: 'Email',
                       onTap: () {},
@@ -77,7 +78,7 @@ class ProfileScreen extends GetView<ProfileScreenController> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 15.0),
-                    child: CustomBoxtWidget(
+                    child: CustomBoxWidget(
                       boxHeight: Get.height * 0.08,
                       boxName: 'Address',
                       onTap: () {},
@@ -87,7 +88,7 @@ class ProfileScreen extends GetView<ProfileScreenController> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 15.0),
-                    child: CustomBoxtWidget(
+                    child: CustomBoxWidget(
                       boxHeight: Get.height * 0.08,
                       boxName: 'Age & D.O.B',
                       onTap: () {},
@@ -97,7 +98,7 @@ class ProfileScreen extends GetView<ProfileScreenController> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 15.0),
-                    child: CustomBoxtWidget(
+                    child: CustomBoxWidget(
                       boxHeight: Get.height * 0.08,
                       boxName: 'Level',
                       onTap: () {},
@@ -107,10 +108,10 @@ class ProfileScreen extends GetView<ProfileScreenController> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 15.0),
-                    child: CustomBoxtWidget(
+                    child: CustomBoxWidget(
                       boxHeight: Get.height * 0.08,
                       boxName: 'Logout',
-                      onTap: () {},
+                      onTap: () => Get.toNamed(kLoginScreen),
                       borderRadius: 9.0,
                       gradientColor: CustomAppColor.buttonGradient,
                     ),
@@ -120,33 +121,6 @@ class ProfileScreen extends GetView<ProfileScreenController> {
             ),
           ),
         ),
-        //     Positioned(
-        //       top: 0,
-        //       left: 0,
-        //       right: 0,
-        //       child: AppBar(
-        //           backgroundColor: Colors.transparent,
-        //           elevation: 0,
-        //           leading: IconButton(
-        //             icon: Icon(Icons.arrow_back, color: Colors.white,),
-        //             onPressed: () {
-        //               Get.back();
-        //             },
-        //           ),
-        //           title: const Text('Profile', style:
-        //             TextStyle(
-        //               fontWeight: FontWeight.w500,
-        //               color: CustomAppColor.kWhiteColor,
-        //               fontSize: 25.0,
-        //               fontFamily: CustomTextSizing.kPoppinsFontFamily,
-        //           ),),
-        //           actions: [
-        //       IconButton(
-        //       icon: Image.asset("assets/icons/person.png", width: 25.0, height: 25.0,), onPressed: () {  },
-        //     ),
-        //   ]
-        // ),
-        //     ),
       ]),
     );
   }

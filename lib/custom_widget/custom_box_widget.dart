@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import '../utils/app_colors.dart';
 import '../utils/custom_text.dart';
 
-class CustomBoxtWidget extends StatelessWidget {
+class CustomBoxWidget extends StatelessWidget {
   final String boxName;
   final double? textFontSize;
-  final Function onTap;
+  final Function() onTap;
   final Color? bgColor;
   final Color? textColor;
   final Gradient? gradientColor;
@@ -13,7 +13,7 @@ class CustomBoxtWidget extends StatelessWidget {
   final double? boxWidth;
   final double? boxHeight;
 
-  const CustomBoxtWidget({
+  const CustomBoxWidget({
     Key? key,
     required this.boxName,
     required this.onTap,
@@ -26,32 +26,35 @@ class CustomBoxtWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: boxHeight,
-      width: boxWidth,
-      decoration: BoxDecoration(
-        gradient: gradientColor,
-        borderRadius: BorderRadius.circular(borderRadius),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.2),
-            offset: const Offset(0, 4),
-            blurRadius: 4,
-          ),
-        ],
-      ),
-      alignment: Alignment.centerLeft,
-      padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 10.0,),
-      child: Text(
-        boxName,
-        style: TextStyle(
-          color: CustomAppColor.kWhiteColor,
-          fontFamily: CustomTextSizing.kPoppinsFontFamily,
-          fontSize: textFontSize,
-          fontWeight: FontWeight.w600,
-          overflow: TextOverflow.ellipsis,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        height: boxHeight,
+        width: boxWidth,
+        decoration: BoxDecoration(
+          gradient: gradientColor,
+          borderRadius: BorderRadius.circular(borderRadius),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.2),
+              offset: const Offset(0, 4),
+              blurRadius: 4,
+            ),
+          ],
         ),
-        maxLines: 2,
+        alignment: Alignment.centerLeft,
+        padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 10.0,),
+        child: Text(
+          boxName,
+          style: TextStyle(
+            color: CustomAppColor.kWhiteColor,
+            fontFamily: CustomTextSizing.kPoppinsFontFamily,
+            fontSize: textFontSize,
+            fontWeight: FontWeight.w600,
+            overflow: TextOverflow.ellipsis,
+          ),
+          maxLines: 2,
+        ),
       ),
     );
   }

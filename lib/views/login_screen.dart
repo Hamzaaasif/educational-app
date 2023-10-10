@@ -1,6 +1,7 @@
 import 'package:educational_app/controller/login_screen_controller.dart';
 import 'package:educational_app/custom_widget/custom_primary_button.dart';
 import 'package:educational_app/utils/app_constant.dart';
+import 'package:educational_app/utils/custom_dialogue.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -126,7 +127,8 @@ class LoginScreen extends GetView<LoginScreenController> {
                      padding: const EdgeInsets.symmetric(vertical: 48.0),
                      child: CustomPrimaryButton(
                          buttonName: 'Log in',
-                         onTap: ()=> Get.toNamed(kDashboardScreen),
+                         onTap: ()=>Get.toNamed(kDashboardScreen),
+                             // CustomDialogue().confirmationDialog(message: "Take a Quizz", dialogueButtonText: 'Skip', yesFunction: ()=> {Get.toNamed(kDashboardScreen)}),
                          gradientColor: CustomAppColor.buttonGradient2,
                          borderRadius: 10.0,
                          buttonWidth: Get.width * 0.4
@@ -160,7 +162,9 @@ class LoginScreen extends GetView<LoginScreenController> {
                      child: CustomPrimaryButton(
                        buttonIcon: Image.asset(controller.googleIcon, height: 30, width: 30,),
                          buttonName: 'Log in with Google',
-                         onTap: (){},
+                         onTap: (){
+                         controller.onGoogleSignIn();
+                         },
                          gradientColor: CustomAppColor.buttonGradient2,
                          borderRadius: 8.0,
                          buttonWidth: Get.width,
