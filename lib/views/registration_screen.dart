@@ -8,6 +8,7 @@ import '../controller/registration_screen_controller.dart';
 import '../custom_widget/custom_primary_button.dart';
 import '../custom_widget/custom_text_field.dart';
 import '../utils/app_colors.dart';
+import '../utils/custom_dialogue.dart';
 import '../utils/custom_text.dart';
 
 class RegistrationScreen extends GetView<RegistrationScreenController>{
@@ -150,7 +151,8 @@ class RegistrationScreen extends GetView<RegistrationScreenController>{
                   alignment: Alignment.center,
                   child: CustomPrimaryButton(
                       buttonName: 'Create Account',
-                      onTap: ()=> Get.toNamed(kLoginScreen),
+                      onTap: ()=> CustomDialogue().confirmationDialog(message: "Take a Quizz", dialogueButtonText: 'Skip', yesFunction: ()=> {Get.toNamed(kDashboardScreen)}),
+                    // Get.toNamed(kLoginScreen),
                       gradientColor: CustomAppColor.buttonGradient2,
                       borderRadius: 8.0,
                       buttonWidth: Get.width * 0.4,

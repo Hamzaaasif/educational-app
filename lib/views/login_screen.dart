@@ -127,8 +127,7 @@ class LoginScreen extends GetView<LoginScreenController> {
                      padding: const EdgeInsets.symmetric(vertical: 48.0),
                      child: CustomPrimaryButton(
                          buttonName: 'Log in',
-                         onTap: ()=>Get.toNamed(kDashboardScreen),
-                             // CustomDialogue().confirmationDialog(message: "Take a Quizz", dialogueButtonText: 'Skip', yesFunction: ()=> {Get.toNamed(kDashboardScreen)}),
+                         onTap: ()=> Get.toNamed(kDashboardScreen),
                          gradientColor: CustomAppColor.buttonGradient2,
                          borderRadius: 10.0,
                          buttonWidth: Get.width * 0.4

@@ -12,3 +12,5 @@ const String kLessonScreen = "/LESSON_SCREEN";
 const String kQuizScreen = "/QUIZ_SCREEN";
 const String kChatGptScreen = "/CHAT_GPT_SCREEN";
 const String kDashboardScreen = "/DASHBOARD_SCREEN";
+const String kTakeQuizScreen = "/TAKE_QUIZ_SCREEN";
+const String kLevelScreen = "/LEVEL_SCREEN";

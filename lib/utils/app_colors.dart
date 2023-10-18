@@ -5,6 +5,8 @@ class CustomAppColor {
 
   static const Color kBackgroundColorBlue = Color(0xFF7F6BE5);
   static const Color kBackgroundColorBlack = Color(0xFF111112);
+  static const Color kBackgroundColorWhite = Color(0xFFE6E6E6);
+  static const Color kBackgroundColorLightBlue = Color(0xFF50429C);
   static const Color kWhiteColor = Color(0xFFFFFFFF);
   static const Color kGreyColor = Color(0xFF949FA6);
   static const Color kDarkBlueColor = Color(0xFF433A72);
@@ -36,6 +38,15 @@ class CustomAppColor {
     end: Alignment.bottomCenter,
   );
 
+  static const Gradient appBackgroundGradient = LinearGradient(
+    colors: [
+      CustomAppColor.kBackgroundColorWhite,
+      CustomAppColor.kBackgroundColorLightBlue,
+    ],
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+  );
+
 
   static const Gradient buttonGradient = LinearGradient(
     colors: [
@@ -62,6 +73,14 @@ class CustomAppColor {
     ],
     begin: Alignment.bottomCenter,
     end: Alignment.topCenter,
+  );
+  static const Gradient optionsBoxGradient = LinearGradient(
+    colors: [
+      CustomAppColor.kDarkBlueColor,
+      CustomAppColor.kButtonGradientBottom,
+    ],
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
   );
 
   static const Gradient chatGradient = LinearGradient(

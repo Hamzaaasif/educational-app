@@ -56,7 +56,7 @@ class CustomDialogue {
                   Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start, // To make the card compact
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
                       "Select Your Level by",
@@ -72,7 +72,7 @@ class CustomDialogue {
                       padding: const EdgeInsets.only(top: 30.0),
                       child: GestureDetector(
                         onTap: (){
-                          Get.toNamed(kQuizScreen);
+                          Get.toNamed(kTakeQuizScreen);
                         },
                         child: Row(
                           children: [

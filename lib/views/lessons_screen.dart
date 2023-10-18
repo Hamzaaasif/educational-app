@@ -56,7 +56,7 @@ class LessonScreen extends GetView<LessonScreenController> {
                       titleMsg: 'A recursive method in java',
                       imagePath: controller.lessonJavaImage,
                       onTap: () {
-                        // controller.javaLaunchURL();
+                        controller.javaLaunchURL();
                       },
                     ),
                     Padding(
@@ -65,7 +65,7 @@ class LessonScreen extends GetView<LessonScreenController> {
                         titleMsg: 'Java Collection',
                         imagePath: controller.javaCollectionImage,
                         onTap: () {
-                          // controller.javaLaunchURL2();
+                          controller.javaLaunchURL2();
 
                         },
                       ),
@@ -76,7 +76,7 @@ class LessonScreen extends GetView<LessonScreenController> {
                         titleMsg: 'How To Initialize an Array list in Java?',
                         imagePath: controller.javaListImage,
                         onTap: () {
-                          // controller.javaLaunchURL3();
+                          controller.javaLaunchURL3();
 
                         },
                       ),
@@ -87,7 +87,7 @@ class LessonScreen extends GetView<LessonScreenController> {
                         titleMsg: 'Recursion & Loops',
                         imagePath: controller.javaLoopImage,
                         onTap: () {
-                          // controller.javaLaunchURL4();
+                          controller.javaLaunchURL4();
                         },
                       ),
                     ),
