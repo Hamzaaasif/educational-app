@@ -151,7 +151,7 @@ class RegistrationScreen extends GetView<RegistrationScreenController>{
                   alignment: Alignment.center,
                   child: CustomPrimaryButton(
                       buttonName: 'Create Account',
-                      onTap: ()=> CustomDialogue().confirmationDialog(message: "Take a Quizz", dialogueButtonText: 'Skip', yesFunction: ()=> {Get.toNamed(kDashboardScreen)}),
+                      onTap: ()=> CustomDialogue().confirmationDialog(message: "Take a Quizz", dialogueButtonText: 'Skip', yesFunction: ()=> Get.back()),
                     // Get.toNamed(kLoginScreen),
                       gradientColor: CustomAppColor.buttonGradient2,
                       borderRadius: 8.0,
