@@ -88,8 +88,8 @@ class LevelScreen extends GetView<LevelScreenController>{
                     child: Obx(()=> CustomPrimaryButton(
                         buttonName:  controller.currentPage.value == 3 ? 'Submission' : "Next",
                         onTap: (){
-                          // CustomBox().infoDialog(message: "your level is.....", dialogueButtonText: "yes");
-                          controller.nextPage();
+                          controller.currentPage.value == 3 ? CustomBox().infoDialog(message: "your level is.....", dialogueButtonText: "yes") :
+                         controller.nextPage();
                         },
                         textColor: CustomAppColor.kWhiteColor,
                         borderRadius: 5,
