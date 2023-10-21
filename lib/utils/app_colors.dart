@@ -74,6 +74,14 @@ class CustomAppColor {
     begin: Alignment.bottomCenter,
     end: Alignment.topCenter,
   );
+  static const Gradient buttonGradient4 = LinearGradient(
+    colors: [
+      CustomAppColor.kGreyColor,
+      CustomAppColor.kGreyColor,
+    ],
+    begin: Alignment.bottomCenter,
+    end: Alignment.topCenter,
+  );
   static const Gradient optionsBoxGradient = LinearGradient(
     colors: [
       CustomAppColor.kDarkBlueColor,

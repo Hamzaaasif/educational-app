@@ -1,86 +1,102 @@
-import 'package:educational_app/model/level_options_model.dart';
+import 'package:educational_app/custom_widget/custom_quiz_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-import '../model/quiz_level_model.dart';
+class LevelScreenController extends GetxController {
+  var currentPage = 0.obs;
+  RxList<MCQWidget> questions = <MCQWidget>[
+     MCQWidget(
+      question: "What is a correct syntax to output 'Hello World' in Java?",
+      options: [
+        "print ('Hello World');",
+        "echo('Hello World');",
+        "Console.WriteLine('Hello World');",
+        "System.out.printin('Hello World');",
+      ], questionIndex: 0,
+    ),
+     MCQWidget(
+      question: "What is serialization and deserialization in Java?",
+      options: [
+        "It is a method for encrypting data.",
+        "It is a way to speed up code execution.",
+        "It is a form of database querying.",
+        "It is the process of converting objects into a byte stream and back",
+      ], questionIndex: 1,
+    ),
+     MCQWidget(
+      question: "What is a Java interface?",
+      options: [
+        "A class that can be instantiated",
+        "A class with only static methods.",
+        "A blueprint for a class with abstract methods.",
+        "A class with private methods.",
+      ],
+      questionIndex: 2,
+    ),
+     MCQWidget(
+      question: "Which loop is used when you want to execute a block of code at least once in Java?",
+      options: [
+        "for loop",
+        "while loop",
+        "do-while loop",
+        "if-else loop",
+      ],
+      questionIndex: 3,
+    ),
+     MCQWidget(
+      question: "What is the result of 5 + 3 * 2 in Java?",
+      options: [
+        "16",
+        "11",
+        "13",
+        "10",
+      ],
+      questionIndex: 4,
+    ),
+     MCQWidget(
+      question: "What is a constructor in Java?",
+      options: [
+        "A method with no parameters.",
+        "A method that returns a value.",
+        "A method used to destroy objects.",
+        "A special method called when an object is created",
+      ],
+      questionIndex: 5,
+    ),
+     MCQWidget(
+      question: "Which of the following is NOT a core interface in the Java Collections Framework?",
+      options: [
+        "List",
+        "Set",
+        "Map",
+        "Array",
+      ],
+      questionIndex: 6,
+    ),
+     MCQWidget(
+      question: "What are Java annotations used for?",
+      options: [
+        "To provide comments in the code.",
+        "To indicate deprecated code",
+        "To add metadata to code elements.",
+        "To create visual effects in GUI applications.",
+      ],
+      questionIndex: 7,
+    ),
+  ].obs;
+  List<int> selectedOptions = List<int>.filled(8, -1);
 
-class LevelScreenController extends GetxController{
-  final PageController pageController = PageController(initialPage: 0);
-  RxInt activePage = 0.obs;
-  RxList<OptionsModel> selectedOption = <OptionsModel>[].obs;
 
-  List<QuizModel> listOfMcq= [
-    QuizModel(ques: "What is a correct syntax to output 'Hello World' in Java?",
-        listOfOptions: [
-         OptionsModel("1",  "print ('Hello World');",),
-         OptionsModel("1",  "echo('Hello World');"),
-         OptionsModel("1",  "Console.WriteLine('Hello World');",),
-         OptionsModel("1",   "System.out.printin('Hello World');",),
-        ],
-        rightAns: "System.out.printin('Hello World');"),
+  // var selectedOptions = List<int>.filled(8, -1).obs;
 
-    QuizModel(ques: "What is serialization and deserialization in Java?",
-        listOfOptions: [
-          OptionsModel("2",  "It is a method for encrypting data.",),
-          OptionsModel("2",  "It is a way to speed up code execution.",),
-          OptionsModel("2",  "It is a form of database querying.",),
-          OptionsModel("2",  "It is the process of converting objects into a byte stream and back",),
-        ],
-        rightAns: "System.out.printin('Hello World');"),
+  PageController pageController = PageController(initialPage: 0);
 
-    QuizModel(ques: "What is a Java interface?",
-        listOfOptions: [
-          OptionsModel("3",  "A class that can be instantiated",),
-          OptionsModel("3",  "A class with only static methods.",),
-          OptionsModel("3",  "A blueprint for a class with abstract methods.",),
-          OptionsModel("3",  "A class with private methods.",),
-        ],
-        rightAns: "System.out.printin('Hello World');"),
+  void handleOptionSelected(int questionIndex, int optionIndex) {
+    selectedOptions[questionIndex] = optionIndex;
+    update(); // Manually trigger a rebuild
+  }
+  void nextPage() {
+  pageController.nextPage(duration: Duration(milliseconds: 300), curve: Curves.linear);
 
-    QuizModel(ques: "Which loop is used when you want to execute a block of code at least once in Java?",
-        listOfOptions: [
-          OptionsModel("4",  "for loop",),
-          OptionsModel("4",  "while loop",),
-          OptionsModel("4",  "do-while loop",),
-          OptionsModel("4",  "if-else loop",),
-        ],
-        rightAns: "System.out.printin('Hello World');"),
-
-    QuizModel(ques: "What is the result of 5 + 3 * 2 in Java?",
-        listOfOptions: [
-          OptionsModel("5",  "16",),
-          OptionsModel("5",  "11",),
-          OptionsModel("5",  "13",),
-          OptionsModel("5",  "10",),
-        ],
-        rightAns: "System.out.printin('Hello World');"),
-
-    QuizModel(ques: "What is a constructor in Java?",
-        listOfOptions: [
-          OptionsModel("6",   "A method with no parameters.",),
-          OptionsModel("6",  "A method that returns a value.",),
-          OptionsModel("6",  "A method used to destroy objects.",),
-          OptionsModel("6",  "A special method called when an object is created",),
-        ],
-        rightAns: "System.out.printin('Hello World');"),
-
-    QuizModel(ques: "Which of the following is NOT a core interface in the Java Collections Framework?",
-        listOfOptions: [
-          OptionsModel("7",   "List"),
-          OptionsModel("7",   "Set",),
-          OptionsModel("7",   "Map",),
-          OptionsModel("7",   "Array",),
-        ],
-        rightAns: "System.out.printin('Hello World');"),
-
-    QuizModel(ques: " What are Java annotations used for?",
-        listOfOptions: [
-          OptionsModel("8",   "To provide comments in the code.",),
-          OptionsModel("8",   "To indicate deprecated code",),
-          OptionsModel("8",   " To add metadata to code elements.",),
-          OptionsModel("8",   "To create visual effects in GUI applications.",),
-        ],
-        rightAns: "System.out.printin('Hello World');"),
-  ];
-
+  }
 }
