@@ -41,7 +41,7 @@ class MCQWidget extends StatelessWidget {
                 final option = entry.value;
                 return GestureDetector(
                   onTap: () {
-                    controller.handleOptionSelected(questionIndex, index);
+                    // controller.handleOptionSelected(questionIndex, index);
                   },
                   child: Row(
                     children: [

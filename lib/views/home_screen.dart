@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:educational_app/controller/home_screen_controller.dart';
 import 'package:educational_app/custom_widget/custom_text_field.dart';
 import 'package:educational_app/utils/app_constant.dart';
@@ -31,7 +33,7 @@ class HomeScreen extends GetView<HomeScreenController>{
                 children: [
                    Row(
                     children: [
-                      const Column(
+                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text("Welcome !", style: TextStyle(
@@ -39,7 +41,7 @@ class HomeScreen extends GetView<HomeScreenController>{
                             fontFamily: CustomTextSizing.kPoppinsFontFamily,
                             fontSize: 20.0,
                             fontWeight: FontWeight.w700,),),
-                          Text("user", style: TextStyle(
+                          Text(controller.loginScreenController.userModel == null ?  "User" : "${controller.loginScreenController.userModel?.userName}", style: TextStyle(
                             color: CustomAppColor.kWhiteColor,
                             fontFamily: CustomTextSizing.kPoppinsFontFamily,
                             fontSize: 20.0,

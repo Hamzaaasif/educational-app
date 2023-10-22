@@ -89,7 +89,7 @@ class LevelScreen extends GetView<LevelScreenController>{
                         buttonName:  controller.currentPage.value == 3 ? 'Submission' : "Next",
                         onTap: (){
                           controller.currentPage.value == 3 ? CustomBox().infoDialog(message: "your level is.....", dialogueButtonText: "yes") :
-                         controller.nextPage();
+                           controller.nextPage();
                         },
                         textColor: CustomAppColor.kWhiteColor,
                         borderRadius: 5,

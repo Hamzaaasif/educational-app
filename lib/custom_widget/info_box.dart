@@ -98,7 +98,7 @@ class CustomBox {
                               Padding(
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 8, vertical: 15),
-                                child: CustomPrimaryButton(buttonName: 'Exit', onTap: ()=> Get.toNamed(kHomeScreen),
+                                child: CustomPrimaryButton(buttonName: 'Exit', onTap: ()=> Get.toNamed(kDashboardScreen),
                                   bgColor: CustomAppColor.kGreyColor,
                                   gradientColor: CustomAppColor.buttonGradient4,
                                   borderRadius: 2,
