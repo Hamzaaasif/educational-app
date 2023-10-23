@@ -8,6 +8,7 @@ import 'package:educational_app/controller/profile_screen_controller.dart';
 import 'package:educational_app/controller/registration_screen_controller.dart';
 import 'package:educational_app/controller/setting_screen_controller.dart';
 import 'package:educational_app/controller/take_quiz_screen_controller.dart';
+import 'package:educational_app/controller/web_view_screen_controller.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/src/bindings_interface.dart';
@@ -34,5 +35,6 @@ class ScreenBindings extends Bindings{
     Get.lazyPut(() => DashboardScreenController());
     Get.lazyPut(() => TakeQuizScreenController());
     Get.lazyPut(() => LevelScreenController());
+    Get.lazyPut(() => WebViewScreenController());
   }
 }

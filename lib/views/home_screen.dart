@@ -36,12 +36,12 @@ class HomeScreen extends GetView<HomeScreenController>{
                        Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Welcome !", style: TextStyle(
+                          const Text("Welcome !", style: TextStyle(
                             color: CustomAppColor.kWhiteColor,
                             fontFamily: CustomTextSizing.kPoppinsFontFamily,
                             fontSize: 20.0,
                             fontWeight: FontWeight.w700,),),
-                          Text(controller.loginScreenController.userModel == null ?  "User" : "${controller.loginScreenController.userModel?.userName}", style: TextStyle(
+                          Text(controller.loginScreenController.userModel == null ?  "User" : "${controller.loginScreenController.userModel?.userName}", style: const TextStyle(
                             color: CustomAppColor.kWhiteColor,
                             fontFamily: CustomTextSizing.kPoppinsFontFamily,
                             fontSize: 20.0,

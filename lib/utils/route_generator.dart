@@ -1,3 +1,4 @@
+import 'package:educational_app/custom_widget/custom_web_view_widget.dart';
 import 'package:educational_app/utils/screen_binding.dart';
 import 'package:educational_app/views/chat_gpt_screen.dart';
 import 'package:educational_app/views/dashboard_screen.dart';
@@ -88,6 +89,11 @@ class RouteGenerator {
       GetPage(
         name: kLevelScreen,
         page: () => const LevelScreen(),
+        binding: ScreenBindings(),
+      ),
+      GetPage(
+        name: kWebViewScreen,
+        page: () => const InAppWebViewExampleScreen(),
         binding: ScreenBindings(),
       ),
 

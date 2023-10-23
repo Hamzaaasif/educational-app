@@ -9,11 +9,8 @@ import '../utils/utils_methods.dart';
 class LoginScreenController extends GetxController{
   String logoImage=Img.get('login_logo.png');
   String logoImage2=Img.get('app_logo_2.png');
-  //user model ka objec
-  // Rx<UserModel> userModel;
   UserModel? userModel;
   String googleIcon=IconImage.get('google_icon.png');
-  // final String? username = Get.arguments;
   late TextEditingController emailTextEditingController;
   RxString emailErrorMsg=''.obs;
   RxBool switchValue = false.obs;
@@ -42,16 +39,6 @@ class LoginScreenController extends GetxController{
         userModel = UserModel(userName: user!.displayName.toString());
         Get.toNamed(kDashboardScreen, arguments: user?.displayName);
       }
-
-
-      // GoogleSignIn googleSignIn = GoogleSignIn();
-      // try {
-      //   await googleSignIn.signIn();
-      //   if(googleSignIn.currentUser!.id!='') {
-      //     Get.toNamed(kDashboardScreen);
-      //   }
-      // } catch (error) {
-      // }
     }
   }
 
