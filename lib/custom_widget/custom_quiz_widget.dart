@@ -10,7 +10,7 @@ class MCQWidget extends StatelessWidget {
   final List<String> options;
   final int questionIndex;
 
-  MCQWidget({
+  const MCQWidget({super.key,
     required this.question,
     required this.options,
     required this.questionIndex,
@@ -41,7 +41,7 @@ class MCQWidget extends StatelessWidget {
                 final option = entry.value;
                 return GestureDetector(
                   onTap: () {
-                    // controller.handleOptionSelected(questionIndex, index);
+                    controller.handleOptionSelected(questionIndex, index);
                   },
                   child: Row(
                     children: [

@@ -97,7 +97,9 @@ class CustomDialogue {
                     Padding(
                       padding: const EdgeInsets.only(top: 30.0, left: 10.0),
                       child: GestureDetector(
-                        onTap: (){},
+                        onTap: (){
+                          levelDialog( dialogueButtonText: 'Next');
+                        },
                         child: Row(
                           children: [
                             Image.asset("assets/images/level.png", height: 33.0, width: 24.0,),
@@ -156,4 +158,155 @@ class CustomDialogue {
     );
   }
 }
+void levelDialog(
+      {
+        Function()? yesFunction,
+        required String dialogueButtonText}) {
+    const double padding = 10.0;
+    const double avatarRadius = 66.0;
+    Get.dialog(
+      Dialog(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30.0),
+        ),
+        elevation: 0.0,
+        backgroundColor: Colors.transparent,
+        child: Container(
+          width: Get.width,
+          padding: const EdgeInsets.only(
+            top: padding + 10,
+            left: padding + 10,
+            right: padding,
+          ),
+          margin: const EdgeInsets.only(top: avatarRadius),
+          decoration: BoxDecoration(
+            color: CustomAppColor.kButtonGradientBottom,
+            shape: BoxShape.rectangle,
+            borderRadius: BorderRadius.circular(padding),
+            boxShadow: const [
+              BoxShadow(
+                color: Colors.black26,
+                blurRadius: 10.0,
+                offset: Offset(0.0, 10.0),
+              ),
+            ],
+          ),
+          child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "select your level",
+              style:
+              TextStyle(color: CustomAppColor.kWhiteColor,
+                   fontFamily: CustomTextSizing.kPoppinsFontFamily,
+                    fontSize: 24.0,),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 30.0, left: 10.0),
+              child: GestureDetector(
+                onTap: (){},
+                child: const Row(
+                  children: [
+                    Icon(Icons.circle, color: CustomAppColor.kWhiteColor, size: 14,),
+                    Padding(
+                      padding: EdgeInsets.only(left: 15.0),
+                      child: Text(
+                        "beginner",
+                        style: TextStyle(
+                          color: CustomAppColor.kWhiteColor,
+                          fontFamily: CustomTextSizing.kPoppinsFontFamily,
+                          fontSize: 15.0,
+                            fontWeight: FontWeight.w600
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 30.0, left: 10.0),
+              child: GestureDetector(
+                onTap: (){},
+                child: const Row(
+                  children: [
+                    Icon(Icons.circle, color: CustomAppColor.kWhiteColor, size: 14,),
+                    Padding(
+                      padding: EdgeInsets.only(left: 15.0),
+                      child: Text(
+                        "Intermediate",
+                        style: TextStyle(
+                            color: CustomAppColor.kWhiteColor,
+                            fontFamily: CustomTextSizing.kPoppinsFontFamily,
+                            fontSize: 15.0,
+                            fontWeight: FontWeight.w600
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 30.0, left: 10.0),
+              child: GestureDetector(
+                onTap: (){},
+                child: const Row(
+                  children: [
+                    Icon(Icons.circle, color: CustomAppColor.kWhiteColor, size: 14,),
+                    Padding(
+                      padding: EdgeInsets.only(left: 15.0),
+                      child: Text(
+                        "profficional",
+                        style: TextStyle(
+                            color: CustomAppColor.kWhiteColor,
+                            fontFamily: CustomTextSizing.kPoppinsFontFamily,
+                            fontSize: 15.0,
+                            fontWeight: FontWeight.w600
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 30.0),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  GestureDetector(
+                    onTap: ()=> Get.toNamed(kDashboardScreen),
+                    child:  Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 15),
+                      child: Text(
+                        dialogueButtonText,
+                        textDirection: TextDirection.ltr,
+                        style: const TextStyle(
+                            color: CustomAppColor.kGreyColor,
+                            fontFamily: CustomTextSizing.kPoppinsFontFamily,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w600
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+            ),
+        ),
+      ),
+      barrierDismissible: false,
+    );
+  }
 

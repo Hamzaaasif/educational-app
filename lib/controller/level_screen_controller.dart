@@ -23,7 +23,7 @@ class LevelScreenController extends GetxController {
         "It is the process of converting objects into a byte stream and back",
       ], questionIndex: 1,
     ),
-     MCQWidget(
+     const MCQWidget(
       question: "What is a Java interface?",
       options: [
         "A class that can be instantiated",
@@ -33,7 +33,7 @@ class LevelScreenController extends GetxController {
       ],
       questionIndex: 2,
     ),
-     MCQWidget(
+     const MCQWidget(
       question: "Which loop is used when you want to execute a block of code at least once in Java?",
       options: [
         "for loop",
@@ -43,7 +43,7 @@ class LevelScreenController extends GetxController {
       ],
       questionIndex: 3,
     ),
-     MCQWidget(
+     const MCQWidget(
       question: "What is the result of 5 + 3 * 2 in Java?",
       options: [
         "16",
@@ -53,7 +53,7 @@ class LevelScreenController extends GetxController {
       ],
       questionIndex: 4,
     ),
-     MCQWidget(
+     const MCQWidget(
       question: "What is a constructor in Java?",
       options: [
         "A method with no parameters.",
@@ -63,7 +63,7 @@ class LevelScreenController extends GetxController {
       ],
       questionIndex: 5,
     ),
-     MCQWidget(
+     const MCQWidget(
       question: "Which of the following is NOT a core interface in the Java Collections Framework?",
       options: [
         "List",
@@ -73,7 +73,7 @@ class LevelScreenController extends GetxController {
       ],
       questionIndex: 6,
     ),
-     MCQWidget(
+     const MCQWidget(
       question: "What are Java annotations used for?",
       options: [
         "To provide comments in the code.",
@@ -87,13 +87,11 @@ class LevelScreenController extends GetxController {
   List<int> selectedOptions = List<int>.filled(8, -1);
 
 
-  // var selectedOptions = List<int>.filled(8, -1).obs;
-
   PageController pageController = PageController(initialPage: 0);
 
   void handleOptionSelected(int questionIndex, int optionIndex) {
     selectedOptions[questionIndex] = optionIndex;
-    update(); // Manually trigger a rebuild
+    update();
   }
   void nextPage() {
   pageController.nextPage(duration: Duration(milliseconds: 300), curve: Curves.linear);
