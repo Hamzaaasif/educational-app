@@ -53,7 +53,6 @@ class ChatGptScreen extends GetView<ChatGptScreenController>{
                       ),
                       child:  Obx(()=> ListView.builder(
                             physics: BouncingScrollPhysics(),
-
                             shrinkWrap: true,
                             itemCount: controller.listOfMsg.length,
                             itemBuilder: (context, index) {
